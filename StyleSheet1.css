@@ -1,0 +1,107 @@
+﻿*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:sans-serif;
+
+}
+img{
+    float:right;
+}
+#chevronImageR:hover {
+    width: 50px; /* Adjust the width and height as needed */
+    height: 50px;
+    cursor: pointer; /* Show a pointer cursor on hover to indicate it's clickable */
+    border-radius:50%;
+}
+#chevronImageL:hover {
+    width: 50px; /* Adjust the width and height as needed */
+    height: 50px;
+    cursor: pointer; /* Show a pointer cursor on hover to indicate it's clickable */
+    border-radius:50%;
+    background:#f2f2f2;
+}
+
+
+
+#chevronImageL:hover {
+    background: #f2f2f2;
+}
+
+
+
+body
+{
+display:flex;
+align-items:center;
+justify-content:center;
+min-height:100vh;
+background:orange;
+}
+ul{
+    list-style-type:none;
+}
+
+.wrapper{
+    width:450px;
+    background:white;
+    border-radius:10px;
+}
+.wrapper header{
+    display:flex;
+    align-items:center;
+    padding:25px 30px 10px;
+    justify-content:space-between;
+}
+
+header .current-date{
+    font-size:1.45rem;
+    font-weight:500;
+}
+.calender{
+    padding:20px;
+}
+.calender ul{
+display:flex;
+flex-wrap:wrap;
+}
+.calender .days{
+    margin-bottom:20px;
+}
+.calender .weeks li{
+    font-weight:500;
+}
+ 
+.calender ul li {
+        position: relative;
+        width: calc(100%/7);
+    }
+
+.calender .days li {
+        z-index: 1;
+        cursor: pointer;
+        margin-top: 30px;
+    }
+
+.days li.inactive{
+    color:grey;
+}
+
+.calender .days li::before{
+    position:absolute;
+    content:"";
+    height:40px;
+    width:40px;
+    top:50%;
+    left:50%;
+    z-index:-1;
+    border-radius:50%;
+    transform:translate(-50%,-50%);
+    
+}
+.days li:hover::before {
+    background: #f2f2f2;
+}
+.days li.active::before{
+    background:orange;
+}
